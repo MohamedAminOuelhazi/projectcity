@@ -2,7 +2,7 @@
 #define SIMULATION_H
 
 
-#include "Evenement.h"
+#include "Evenement.cpp"
 #include "Ville.h"
 
 
@@ -10,25 +10,22 @@ class Simulation {
 private:
     int cycleActuel;
     Ville& ville;
-    vector<Evenement*> evenements;
+    vector<string> evenements; // Liste des événements possibles
 
 public:
 
-    Simulation(Ville& ville) : ville(ville), cycleActuel(0) {
+    Simulation(Ville& v); // Constructeur avec référence à Ville
 
-        // Ajouter des événements par défaut au démarrage de la simulation
-        evenements.push_back(new PanneCourant());
-        evenements.push_back(new GreveJardiniers());
-        evenements.push_back(new TempeteNeige());
-        evenements.push_back(new PanneCourant());
-        evenements.push_back(new EmbouteillageTransport());
-
-        cout << "Simulation initialisée avec " << evenements.size() << " événements par défaut." << endl;
-    }
+    virtual ~Simulation();
 
     void demarrerCycle();
     void terminerCycle();
-    void declencherEvenement(const string& evenement);
+    void declencherEvenement();
+
+
+    void initialiserEvenements(); // Initialiser les événements
+    void gererRessources();       // Gérer les ressources à chaque cycle
+    void verifierSatisfaction();
 
 };
 

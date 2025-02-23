@@ -36,6 +36,8 @@ public:
     void setElectricite();
     void setSatisfaction();
 
+    vector<Batiment*> getBatiments() const;
+
 };
 
 

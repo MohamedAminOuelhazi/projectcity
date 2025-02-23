@@ -4,7 +4,7 @@ Ville::Ville(string nom,double budget, int population){
     this->nom=nom;
     this->budget=budget;
     this->population=population;
-    this->satisfaction=100;
+    this->satisfaction=0;
     this->ressourcesEau=10000 ;
     this->ressourcesElectricité=5000;
 };
@@ -96,4 +96,6 @@ int Ville::getSatisfaction()  {
     return satisfaction;
 }
 
-
+vector<Batiment*> Ville::getBatiments() const {
+    return batiments; // Retourne une copie de la liste des bâtiments
+}

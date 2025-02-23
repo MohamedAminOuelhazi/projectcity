@@ -8,7 +8,7 @@ using namespace std;
 class Batiment{
 
 protected:
-    int id;
+    int id=0;
     string nom;
     string type;
     int consommationEau;
@@ -16,9 +16,11 @@ protected:
     int effetSatisfaction;
 
 public:
-    Batiment(int,string ,string ,int , double , int );
+    Batiment(string ,string ,int , double , int );
 
     void afficherDetails();
+
+    string virtual chaine()=0;
 
     void calculerImpactRessources(int&, double& );
 
@@ -32,6 +34,12 @@ public:
     int getEffetSatisfaction()const;
     int getconsommationEau()const;
     int getconsommationElectricite()const;
+
+
+    void setnom(string);
+    void setEffetSatisfaction(int );
+    void setconsommationEau(int );
+    void setconsommationElectricite(double );
 
     virtual ~Batiment() {}
 };

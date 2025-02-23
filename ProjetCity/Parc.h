@@ -9,8 +9,12 @@ public:
     double surface;
     double effetBienEtre;
 
-    Parc(int,string,string,double,double,int,double,double);
+    Parc(string,string,double,double,int,double,double);
     double ameliorerBienEtre() const;
+
+
+    virtual string chaine();
+
 };
 
 #endif // PARC_H

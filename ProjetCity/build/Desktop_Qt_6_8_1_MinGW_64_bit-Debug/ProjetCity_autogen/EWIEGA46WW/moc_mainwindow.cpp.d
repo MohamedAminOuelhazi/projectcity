@@ -374,4 +374,9 @@ E:/Dev/QT/ProjetCity/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/ProjetCity_autoge
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
   E:/Dev/QT/ProjetCity/Batiment.h \
+  E:/Dev/QT/ProjetCity/Evenement.cpp \
+  E:/Dev/QT/ProjetCity/Evenement.h \
+  E:/Dev/QT/ProjetCity/Parc.h \
+  E:/Dev/QT/ProjetCity/Simulation.h \
+  E:/Dev/QT/ProjetCity/Usine.h \
   E:/Dev/QT/ProjetCity/Ville.h

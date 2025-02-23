@@ -9,11 +9,16 @@ public:
     double productionRessources;
     double pollution;
 
-    Usine(int,string,string,double,double,int,double,double);
+    Usine(string,string,double,double,int,double,double);
 
 
     double produireRessources() const;
     double calculerPollution() const;
+
+
+    virtual string chaine();
+
+
 };
 
 

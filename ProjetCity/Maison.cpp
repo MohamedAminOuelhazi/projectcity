@@ -2,7 +2,7 @@
 
 
 // définition du constructeur
-Maison::Maison(int id, string n, string t, double CE, double CEL, int e, int c , int ha):Batiment(id,n,t,CE,CEL,e)
+Maison::Maison(string n, string t, double CE, double CEL, int e, int c , int ha):Batiment(n,t,CE,CEL,e)
 {
     capaciteHabitants = c;
     habitantsActuels = ha;
@@ -51,3 +51,36 @@ void Maison::getNom(){
 int Maison::gethabitantsActuels(){
     return habitantsActuels;
 }
+
+int Maison::getcapaciteHabitants(){
+    return capaciteHabitants;
+}
+
+
+void Maison::setHabitantsActuels(int n){
+    habitantsActuels=n;
+}
+
+void Maison::setCapaciteHabitants(int n){
+    capaciteHabitants=n;
+}
+
+string Maison::chaine(){
+    string s ;
+
+
+
+    s += "le nom est " + Batiment::getnom() +"\n";
+    s += " le type est "  + Batiment::gettype() +"\n";
+    s += " la consommation de l'eau est "  + to_string(Batiment::getconsommationEau()) +"unité par cycle \n";
+    s += " la consommation de l'électricité est "  + to_string(Batiment::getconsommationElectricite()) +"unité par cycle \n";
+    s += " l'effet de satisfaction des habitants est "  + to_string(Batiment::getEffetSatisfaction()) +"\n";
+
+    s += " Capacité :"  + to_string(capaciteHabitants) +"\n";
+    s += " Habitants actuels :"  + to_string(habitantsActuels) +"\n";
+
+
+    return s;
+
+}
+

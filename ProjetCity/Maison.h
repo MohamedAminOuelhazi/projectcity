@@ -11,7 +11,7 @@ class Maison: public Batiment
 
 
 public:
-    Maison(int,string,string,double,double,int,int,int);
+    Maison(string,string,double,double,int,int,int);
     void ajouterHabitants(int nb);
     void retirerHabitants( int nb);
 
@@ -19,7 +19,12 @@ public:
 
     void getNom();
     int gethabitantsActuels();
+    int getcapaciteHabitants();
 
+    void setHabitantsActuels(int);
+    void setCapaciteHabitants(int);
+
+    virtual string chaine();
 };
 
 
